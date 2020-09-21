@@ -4,12 +4,12 @@ export default class CoordinatesButton extends Component {
 mouseCoor (e){
   let X = e.clientX;
   let Y = e.clientY;
-return [X,Y]
+return this.props.onReceiveCoordinates([X,Y])
 }
 render() {
     return (
     <div >
-    <button onClick= {onReceiveCoordinates(this.mouseCoor)}>Clikc here</button>
+    <button onClick= {this.mouseCoor}>Clikc here</button>
     </div>
     )
 }
