@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 
 export default class CoordinatesButton extends Component {
-buttonClicked = (e)=> {
-  let X = ${e.screenX}, ${e.screenY};
-  let Y = ${e.clientX}, ${e.clientY};
-  let array = [X, Y]
-  return array;
-  }
+mouseCoor (e){
+  let X = e.clientX;
+  let Y = e.clientY;
+return [X,Y]
+}
 render() {
     return (
     <div >
-    <button onClick= {this.buttonClicked}>Clikc here</button>
+    <button onClick= {onReceiveCoordinates(this.mouseCoor)}>Clikc here</button>
     </div>
     )
 }
